@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" type="text/css" href="style_1.1P.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cheatsheet</title>
+  </head>
+  <body>
+    <!-- To String Method -->
+    <div class="boxformat">
+      <h1>To string Method</h1>
+      <h1>This Convert number to string, ID.ToString()</h1>
+      <label>Enter Any Number: </label>
+      <input type="number" id="a" oninput="to_string_method()" /><br />
+      <label>OutPut: </label>
+      <label id="to_string_method"></label>
+    </div>
+    <!-- Grounding Number-->
+    <div class="boxformat">
+      <h1>The toFixed() Method and The toPrecision() Method</h1>
+      <input
+        type="text"
+        id="b1"
+        oninput="to_fixed_method()"
+        placeholder="12345678"
+        pattern="[0-9]"
+      />
+      <label>.</label>
+      <input type="text" id="b2" oninput="to_fixed_method()" /><br />
+      <h1>Grouding number, ID.ToFixed(number of decimal Point)</h1>
+      <label>How Many Decimal Points Do You Want?</label><br />
+      <label>OutPut: </label>
+      <input type="number" id="d_point" oninput="to_fixed_method()" />
+      <p id="to_fixed_method_2"></p>
+      <hr />
+      <h1>Precision number, ID.toPrecision(Length of the Number)</h1>
+      <label>The Length Of you Number:</label>
+      <input type="number" id="p_point" oninput="to_fixed_method()" /><br />
+      <label>OutPut: </label>
+      <p id="to_precision_method"></p>
+    </div>
+    <!--To get Value Function-->
+    <div class="boxformat">
+      <h1>Value of Method</h1>
+      <h1>Return A Numbe as a number, ID.valueOF()</h1>
+      <input
+        style="margin-top: 10px"
+        type="number"
+        id="c1"
+        oninput="to_value_method()"
+      /><br />
+      <input
+        style="margin-top: 10px; margin-bottom: 10px"
+        type="number"
+        id="c2"
+        oninput="to_value_method()"
+      /><br />
+      <label class="inline">Output: </label>
+      <p id="to_get_value" class="inline"></p>
+    </div>
+    <!--Saving Calculation-->
+    <div class="boxformat">
+      <h1>Saving Calculation</h1>
+      <h1>Use This To Calculate Your Saving</h1>
+      <form>
+        <p class="inline">Please Enter Your Initial Saving Amount</p>
+        <input
+          class="inputmargin"
+          type="number"
+          id="d1"
+          oninput="to_string_method()"
+        />
+        <p class="inline">AUD</p>
+        <br />
+        <p class="inline">Please Enter The Bank Interest Rate:</p>
+        <input
+          class="inputmargin"
+          type="number"
+          id="d2"
+          oninput="to_string_method()"
+        />
+        <p class="inline">%</p>
+        <br />
+        <p class="inline">Please Enter Your Saving Term:</p>
+        <input
+          class="inputmargin"
+          type="number"
+          id="d3"
+          oninput="to_string_method()"
+        />
+        <p class="inline">Year(s)</p>
+
+        <br />
+        <p class="inline">Please Select Your Compond Rate:</p>
+        <select id="d4">
+          <option value="0">Continuously</option>
+          <option value="52">Weekly</option>
+          <option value="26">Bi-Weekly</option>
+          <option value="12" selected="">Monthly</option>
+          <!--Default Option-->
+          <option value="1">Annually</option>
+        </select>
+      </form>
+      <button onclick="saving_calculation()" style="margin-top: 10px">
+        Calculate</button
+      ><br />
+      <div
+        style="
+          border: 1px solid black;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 10px;
+        "
+      >
+        <p class="inline" id="saving_calculator"></p>
+      </div>
+    </div>
+    <!-- Array Method -->
+    <div class="boxformat">
+      <div>
+        <h1>List Of Car and Their Made Year</h1>
+        <label id="to_array_method"></label>
+      </div>
+      <div>
+        <h1>List Of Car oldest to Newest</h1>
+        <p id="sort_cars_old_to_new"></p>
+      </div>
+      <div>
+        <h1>List Of Car By Name</h1>
+        <p id="sort_cars_by_name"></p>
+      </div>
+      <button
+        class="a"
+        onclick="oldest_car()"
+        style="margin-top: 10px; width: 150px"
+      >
+        Get oldest Car
+      </button>
+      <p class="inline" id="oldest_car"></p>
+      <br />
+      <button onclick="newest_car()" style="margin-top: 10px; width: 150px">
+        Get Newest Car
+      </button>
+      <p class="inline" id="newest_car"></p>
+    </div>
+    <!-- Age Calcualtion-->
+    <div class="boxformat">
+      <h1>Age Calculation</h1>
+      <h2 class="inline">Today Date is:</h2>
+      <h2 class="inline" id="date_display"></h2>
+      <br />
+      <label>Please Enter Your Birth Date: </label>
+      <input
+        placeholder="Date: 1-31"
+        style="margin: 5px"
+        type="number"
+        id="dob"
+        oninput="age_calculate()"
+      />
+      <input
+        placeholder="Month: 1-12"
+        style="margin: 5px"
+        type="number"
+        id="mob"
+        oninput="age_calculate()"
+      />
+      <input
+        placeholder="Year: 2000"
+        style="margin: 5px"
+        type="number"
+        id="yob"
+        oninput="age_calculate()"
+      />
+
+      <br />
+      <label>Confirm Your Date Of Birth: </label>
+      <p id="your_dob" class="inline"></p>
+      <br />
+      <label>Your Age Is: </label>
+      <p id="your_age" class="inline"></p>
+      <br />
+      <label>Have been Living </label>
+      <p id="your_month" class="inline"></p>
+      <label> Months</label>
+      <br />
+      <label>You Have been Living </label>
+      <p id="your_day" class="inline"></p>
+      <label> days</label><br />
+      <label>You Have been Living </label>
+      <p id="your_hour" class="inline"></p>
+      <label> hours</label><br />
+      <label>You Have been Living </label>
+      <p id="your_minute" class="inline"></p>
+      <label> minutes</label><br />
+      <br />
+    </div>
+  </body>
+  <script>
+    const date = new Date();
+    document.getElementById("date_display").innerHTML = date;
+    const minute = 1000 * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+    const week = day * 7;
+    const month = day * 30;
+    const year = day * 365;
+
+    function age_calculate() {
+      let year_of_birth = parseInt(document.getElementById("yob").value);
+      let month_of_birth = parseInt(document.getElementById("mob").value) - 1; // Subtract 1 to match JavaScript month indexing
+      let day_of_birth = parseInt(document.getElementById("dob").value);
+
+      let current_year = date.getFullYear();
+      let current_month = date.getMonth();
+      let current_day = date.getDay();
+      let age = current_year - year_of_birth;
+
+      let date_of_birth = new Date();
+      date_of_birth.setFullYear(year_of_birth, month_of_birth, day_of_birth);
+      document.getElementById("your_dob").innerHTML =
+        date_of_birth.toDateString(); //Return this as a short date
+      document.getElementById("your_age").innerHTML = age;
+      document.getElementById("your_month").innerHTML = Math.round(
+        (date.getTime() - date_of_birth.getTime()) / month
+      );
+
+      document.getElementById("your_day").innerHTML = Math.round(
+        (date.getTime() - date_of_birth.getTime()) / day
+      );
+      document.getElementById("your_hour").innerHTML = Math.round(
+        (date.getTime() - date_of_birth.getTime()) / hour
+      );
+      document.getElementById("your_minute").innerHTML = Math.round(
+        (date.getTime() - date_of_birth.getTime()) / minute
+      );
+    }
+    let cars = [
+      { year: 2022, make: "Toyota" },
+      { year: 2019, make: "Honda" },
+      { year: 2020, make: "Ford" },
+      { year: 2021, make: "Chevrolet" },
+      { year: 2018, make: "Nissan" },
+      { year: 2017, make: "BMW" },
+      { year: 2023, make: "Audi" },
+      { year: 2016, make: "Volkswagen" },
+      { year: 2015, make: "Mercedes-Benz" },
+      { year: 2014, make: "Subaru" },
+    ];
+
+    //Print Car List to Site
+    let cars_content = ""; //Create an empty array to store value
+    for (let i = 0; i < cars.length; i++) {
+      cars_content += cars[i].make + " " + cars[i].year + "<br>";
+    }
+    document.getElementById("to_array_method").innerHTML = cars_content;
+
+    //Print Car from Old TO New
+    let new_car_list = cars; //This protect the Original Car List
+    new_car_list.sort(function (a, b) {
+      return a.year - b.year;
+    });
+    let cars_content_1 = "";
+    for (let i = 0; i < new_car_list.length; i++) {
+      cars_content_1 +=
+        new_car_list[i].make + " " + new_car_list[i].year + "<br>";
+    }
+    document.getElementById("sort_cars_old_to_new").innerHTML = cars_content_1;
+
+    //Sort By Name
+    let new_car_list_1 = cars;
+    (""); //Create an empty array to store value
+    new_car_list_1.sort(function (a, b) {
+      return a.make.localeCompare(b.make);
+    });
+    let cars_content_2 = ""; //Create an empty array to store value
+
+    for (let i = 0; i < new_car_list_1.length; i++) {
+      cars_content_2 += cars[i].make + " " + cars[i].year + "<br>";
+    }
+    document.getElementById("sort_cars_by_name").innerHTML = cars_content_2;
+
+    //Sort Car new
+    function newest_car() {
+      cars.sort(function (a, b) {
+        return b.year - a.year;
+      });
+      document.getElementById("newest_car").innerHTML =
+        cars[0].make + " " + cars[0].year;
+    }
+    //sort car old
+    function oldest_car() {
+      cars.sort(function (a, b) {
+        return a.year - b.year;
+      });
+      document.getElementById("oldest_car").innerHTML =
+        cars[0].make + " " + cars[0].year;
+    }
+
+    //string method
+    function to_string_method() {
+      let x = document.getElementById("a").value;
+      document.getElementById("to_string_method").innerHTML = x.toString();
+    }
+
+    function to_fixed_method() {
+      // This is getting the data from the input as numbe then conbine the number
+      let x = document.getElementById("b1").value;
+      let y = document.getElementById("b2").value;
+      let d = document.getElementById("d_point").value;
+      let p = document.getElementById("p_point").value;
+
+      let z = x.concat(".", y);
+      // Convering A string to number
+      let numZ = parseFloat(z);
+      document.getElementById("to_fixed_method_2").innerHTML = numZ.toFixed(d);
+      document.getElementById("to_precision_method").innerHTML =
+        numZ.toPrecision(p);
+    }
+
+    function to_value_method() {
+      let x = document.getElementById("c1").value;
+      let y = document.getElementById("c2").value;
+
+      document.getElementById("to_get_value").innerHTML = (
+        x +
+        " " +
+        y
+      ).valueOf();
+    }
+    function saving_calculation() {
+      let p = document.getElementById("d1").value;
+      let r = document.getElementById("d2").value / 100;
+      let t = document.getElementById("d3").value;
+      let n = document.getElementById("d4").value;
+
+      // document.getElementById("saving_calculator").innerHTML =
+      //   p + "<br>" + r + "<br>" + t + "<br>" + n + "<br>";
+
+      document.getElementById("saving_calculator").innerHTML = (
+        p * Math.pow(1 + r / n, n * t)
+      )
+        // .toFixed(2)
+        .toLocaleString(
+          "en-US",
+
+          {
+            style: "currency",
+            currency: "AUD",
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          }
+        );
+    }
+  </script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addition Calculator</title>
+</head>
+<body>
+    <h1>Simple Addition Calculator</h1>
+    <label for="a">Enter value for 'a':</label>
+    <input type="number" id="a" />
+    <br>
+    <label for="b">Enter value for 'b':</label>
+    <input type="number" id="b" />
+    <br>
+    <button onclick="calculate()">Calculate</button>
+    <br>
+    <p id="result">Result will be displayed here.</p>
+
+    <script>
+        function calculate() {
+            // Get values of 'a' and 'b' from input fields
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+            
+            // Perform the addition
+            var c = a + b;
+            
+            // Display the result in the 'result' paragraph
+            document.getElementById('result').innerText = "The result of " + a + " + " + b + " is " + c + ".";
+        }
+    </script>
+
+<head>
+    <title>String Input Example</title>
+</head>
+<body>
+    <script>
+        // Use the prompt() function to take input as a string
+        var userInput = prompt("Please enter your name:");
+        
+        // Display the user input
+        if (userInput !== null) {
+            alert("Hello, " + userInput + "!");
+        } else {
+            alert("You didn't enter anything.");
+        }
+    </script>
+</body>
+<head>
+    <title>String Input Example</title>
+</head>
+<body>
+    <h1>String Input Example</h1>
+    <p>Click the button below to enter your name:</p>
+    <button onclick="getName()">Enter Name</button>
+    <p id="greeting"></p>
+
+    <script>
+        function getName() {
+            // Use the prompt() function to take input as a string
+            var userInput = prompt("Please enter your name:");
+
+            // Display the user input on the page
+            if (userInput !== null) {
+                document.getElementById("greeting").innerText = "Hello, " + userInput + "!";
+            } else {
+                document.getElementById("greeting").innerText = "You didn't enter anything.";
+            }
+        }
+    </script>
+</body>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" type="text/css" href="style_1.1P.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Stories</title>
+  </head>
+  <body class="main">
+    <h id="display_date"></h><br />
+    <div>
+    <h style="font-size: 10vw">ChatGPT Story</h>
+    </div>
+    <p1><b>Story 1</b></p1>
+    <div >
+      <p id="story_1" style="border: 1px solid black; padding: 5px">
+        Once upon a time in a quaint village, there lived a young girl named
+        Lily. She was known for her extraordinary kindness and compassion
+        towards all living creatures. One day, while wandering in the woods,
+        Lily discovered an injured baby bird lying helplessly on the ground.
+        Without a second thought, she gently cradled the bird in her hands and
+        brought it home. With utmost care, Lily tended to the bird's wounds and
+        provided it with food and water. As days passed, a strong bond formed
+        between Lily and her newfound friend, whom she named Pip. Pip's wings
+        healed, but he remained by Lily's side, refusing to leave. As winter
+        approached, the village faced a severe snowstorm. Many birds were
+        trapped, unable to find shelter. Witnessing their plight, Lily had an
+        idea. She opened her doors and windows, inviting the freezing birds into
+        her home, where they found warmth and safety. Word of Lily's compassion
+        spread throughout the village, and soon, the villagers followed her
+        lead, providing shelter and food for the birds. Lily's act of kindness
+        inspired an entire community to care for nature's creatures. From that
+        day forward, the village became a haven of love and compassion, all
+        thanks to Lily's selfless heart.
+      </p>
+      <div style="border: 1px solid black; padding: 5px;">
+        <p>The length Of Story 1 is: </p>
+        <p ID="Story_1_length"></p>
+      </div>
+      </div>
+      <div>
+      <p1><b>Story 2</b></p1>
+        <p id="new_story_2" style="border: 1px solid black; padding: 5px"></p>
+        <div style="border: 1px solid black; padding: 5px;">
+        <p>The Length Of Story 2 is:  </p>
+          <p ID="Story_2_length" ></p>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 5px; padding-top: 50px;">    <button onclick="changename()">Put Yourself As the Character</button><br />
+    </div>
+    <div style="padding: 5px;">    <button onclick="makeupper()">Make the whole story upper case</button><br />
+    </div>
+    <div style="padding: 5px;">    <button onclick="makelower()">Make the whole story Lower Case</button><br />
+    </div>
+    <div style="padding: 5px;">    <button onclick="get_story_2()">Get 2nd Story</button><br />
+    </div>
+    <div style="padding: 5px;">    <button onclick="combine_story()">Combine 2 Story</button><br />
+    </div>
+    <div style="padding: 5px;">
+       <button onclick="get_length()">Getting the legth of each Story</button>
+    </div>
+    <div>
+      <p id="new_story" style="border: 1px solid black; padding: 5px"></p>
+    </div>
+    <button onclick="get_character_at()">Splitting The Story by "."</button><br />
+    <div>
+      <p id="new_story_3" style="border: 1px solid black; padding: 5px"></p>
+    </div>
+    <script type="text/JavaScript" src="task1.2.js"></script>
+  </body>
+</html>
